@@ -1,0 +1,1 @@
+xc_kernel.py is the first draft of the xc kernel solver, to be used with iDEA and be stored in iDEA/iDEA dir. ATM it runs however produces physically inacurate answers and 0 answers for low densirty regions.
