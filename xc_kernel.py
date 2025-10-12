@@ -1,9 +1,5 @@
 """
-Improved XC-kernel computation module for iDEA (1D)
-
-This file preserves the original module's public API but includes several
-robustness, correctness, and performance improvements while keeping the
-same functionality.
+XC-kernel computation module for iDEA (1D)
 
 Key improvements (non-exhaustive):
 - Fixed mirror-padding implementation using numpy.pad('reflect').
@@ -42,7 +38,7 @@ __all__ = [
 
 
 def _get_v_ks_from_system(s_ks: iDEA.system.System) -> np.ndarray:
-    """Robustly extract the Kohn–Sham (effective) potential from a system.
+    """Extract the Kohn–Sham (effective) potential from a system.
 
     Different iDEA versions may store the KS potential under different
     attribute names (e.g. v_ext for the non-interacting system returned by
@@ -103,7 +99,7 @@ def _get_xc_potential(
 
 
 def _gaussian_perturbation(x: np.ndarray, center_idx: int, sigma: float, amp: float) -> np.ndarray:
-    """Make a normalized Gaussian perturbation on the grid whose maximum equals amp.
+    """Make a normalised Gaussian perturbation on the grid whose maximum equals amp.
 
     amp is the height at the center grid point (i.e. the same units as n(x)).
     """
